@@ -1,7 +1,7 @@
 function addFields() {
   var number = document.getElementById("sem").value;
   var sems = document.getElementById("sems");
-  if (number < 9) {
+  if (number < 9 && number > 0) {
     while (sems.hasChildNodes()) {
       sems.removeChild(sems.lastChild);
     }
@@ -11,8 +11,9 @@ function addFields() {
       input.type = "text";
       input.id = i + 1;
       input.placeholder = "Enter your SPI";
-      input.className = "mr-2";
+      input.className += "ml-4";
       sems.appendChild(input);
+      sems.appendChild(document.createElement("br"));
       sems.appendChild(document.createElement("br"));
     }
     var Button = document.createElement("button");

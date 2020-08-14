@@ -26,6 +26,10 @@ function addFields() {
         if (j == 2) {
           cpi += document.getElementById(j).value * 28;
           sum += 28;
+        }
+        if (j == 4) {
+          cpi += document.getElementById(j).value * 29;
+          sum += 29;
         } else {
           cpi += document.getElementById(j).value * 26;
           sum += 26;
